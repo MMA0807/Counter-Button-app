@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{311:function(o,e,n){"use strict";n.r(e),e.default=function(){var o=document.querySelector(".js-module-btn");o.innerHTML="Lazy-load work!",o.style.color="red"}}}]);
