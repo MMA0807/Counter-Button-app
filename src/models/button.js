@@ -1,7 +1,6 @@
-import "../styles/button.css";
+import '../styles/button.css';
 
-let count = 0;
-const CLICKS = [" клик ", " клика ", " кликов"];
+const CLICKS = [' клик ', ' клика ', ' кликов '];
 
 function declOfNum(number, titles) {
   const cases = [2, 0, 1, 1, 1, 2];
@@ -13,17 +12,21 @@ function declOfNum(number, titles) {
 }
 
 class CounterButton {
+  _count = 0;
+
   makeCounter() {
-    count++;
-    return count + declOfNum(count, CLICKS);
+    this._count++;
+    return this._count + declOfNum(this._count, CLICKS);
   }
 
   render(selector) {
-    selector.insertAdjacentHTML(
-      "beforeend",
-      `<button class='btn js-btn'>Click me!</button>`
-    );
-    document.querySelector(".js-btn").addEventListener("click", (e) => {
+    document
+      .querySelector(selector)
+      .insertAdjacentHTML(
+        'beforeend',
+        `<button class='btn js-btn'>Click me!</button>`
+      );
+    document.querySelector('.js-btn').addEventListener('click', (e) => {
       e.target.innerHTML = this.makeCounter();
     });
   }
